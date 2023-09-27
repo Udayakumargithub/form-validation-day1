@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+
+    <title>Hello, world!</title>
+    <script src="https://kit.fontawesome.com/956d0879c6.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <section class="form my-auto">
+      <div class="form-2 my-auto">
+        <div class="container my-auto">
+          <form>
+            <div class="form-row text-center">
+              <div class="col">
+                <label for="exampleInputEmail1">First name <span style="color: red;">*</span></label>
+                <input type="text" class="form-control" placeholder="First name" id="firstName">
+                <span style="display: none;" id="firstNameerror">First name required</span>
+              </div>
+              <div class="col">
+                 <label for="exampleInputEmail1">Last name </label>
+                <input type="text" class="form-control" placeholder="Last name" id="lastName">
+              </div>
+            </div>
+     <div class="form-group">
+      <label for="exampleInputEmail1">Email address <span style="color: red;">*</span></label>
+      <input type="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Your Email">
+      <span style="display: none ;color:red;" id="emailerror">Email required</span>
+     </div>
+     <div class="form-row text-center">
+      <div class="col">
+        <label for="exampleInputPassword1" id="">Password <span style="color: red;">*</span></label>
+        <input type="password" class="form-control" id="password" placeholder="Enter Your Password">
+        <span style="display: none;" id="passworderror">Password required</span>
+      </div>
+      <div class="col">
+        <label for="exampleInputPassword1" id="">Confirm Password <span style="color: red;">*</span></label>
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Enter Your Password" >
+        <span style="display: none;" id="confirmPassworderror">Confirm Password Confirm required</span>
+      </div>
+     </div>
+     <div class="button mx-auto text-center mt-3 mb-3">
+      <button type="button" onclick="submitbutton()" class="btn btn-primary mx-auto text-center">Button</button>
+     </div>
+    </form>
+      </div>
+      </div>
+    </section>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+ <script>
+      function submitbutton(){
+        console.log("------");
+        var firstName=document.getElementById('firstName').value;
+        var lastName=document.getElementById('lastName').value;
+        var emailValue=document.getElementById('email').value;
+        var passwordValue=document.getElementById('password').value;
+        var confirmPassword=document.getElementById('confirmPassword').value;
+
+
+        if (firstName) {
+          document.getElementById('firstName').style='border:2px solid green';
+          document.getElementById('firstNameerror').style='display:none;';
+        } else {
+          document.getElementById('firstName').style='border:2px solid red';
+          document.getElementById('firstNameerror').style='display:black;color:red';
+        }
+        if (lastName) {
+          document.getElementById('lastName').style='border:2px solid green';
+        } else {
+          document.getElementById('lastName').style='border:2px solid red';
+        }
+        if (emailValue) {
+          document.getElementById('email').style='border:2px solid green';
+          document.getElementById('emailerror').style='display:none';
+        } else {
+          document.getElementById('email').style='border:2px solid red';
+          document.getElementById('emailerror').style='display:black;color:red';
+        }
+        if (passwordValue) {
+          document.getElementById('password').style='border:2px solid green';
+          document.getElementById('passworderror').style='display:none';
+
+        } else {
+          document.getElementById('password').style='border:2px solid red';
+          document.getElementById('passworderror').style='display:black;color:red';
+        }
+        if (confirmPassword) {
+          document.getElementById('confirmPassword').style='border:2px solid green';
+          document.getElementById('confirmPassworderror').style='display:none';
+
+        } else {
+          document.getElementById('confirmPassword').style='border:2px solid red';
+          document.getElementById('confirmPassworderror').style='display:black;color:red';
+        }
+      }
+    </script>
